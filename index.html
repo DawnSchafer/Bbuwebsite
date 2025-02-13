@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To my Bubbu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #fff4f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d63384;
+        }
+        h2 {
+            color: #d63384;
+            font-style: italic;
+        }
+        .letter{
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .msg-contain{
+            background-color: white;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .hidden-message {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: #d63384;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .message-content {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+            border-radius: 10px;
+        }
+        .image1 {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+        .image2{
+            width:auto;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .image3{
+            width: 60%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .spotifylink {
+            margin-top: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
+        .countdown-container {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f78bc12b;
+            border-radius: 10px;
+        }
+        .countdown {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d63384
+        }
+        .footer{
+            padding-top: 5%;
+            padding-left: 60%;
+            padding-bottom: 10px;
+            max-height: 2cm;
+            max-width: 400px;
+            text-align: left;
+            background-color: #d63384;
+            margin-top: 10px;
+            color: white;
+            border-radius: 10px;
+        }
+        .photos-drive{
+            margin-top: 10px;
+            background-color: white;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="letter">
+        <h1 style="font-style: italic;">Bubbu Forever</h1>
+        <p>Oceans seperates lands not souls🌊..Even miles apart, my heart is always with you💞.</p>
+        <img src="bubbuimg.png" class="image3" alt="Bubbu loves you"/>
+        <h2>Happy Valentines Day Bubbu</h2>
+        </div>
+
+        <div class="msg-contain">
+            <p>Every day is special with you, but today, I want to remind you how much you mean to me.</p>
+        <div class="hidden-message" onclick="revealMessage()" style="font-weight:bolder;">Tap to Reveal</div>
+        <p class="message-content" id="love-message">Happy valentines day love💞. I can't wait for you to come home! Though we are miles apart, I still wanted to make this day special for my one and only love. Words would never suffice how much you mean to me. I always feel incomplete the moment we are apart as a part of my soul resides with you. Every day with you pass in the blink of an eye wheres every second without you seems like years. I cant wait for the day when you will be finally mine. I cant wait to forget myself in the comfort of your embrace..coz that is where I forget the world..coz you are my HOME and thats where I belong. I love you more. <br>~love,<br>Your Bubbu</p>
+        
+        <img src="imgcropped.jpg" alt="Us together" class="image1" id="hidden-img" />
+        </div>
+        <div class="spotifylink" style=" font-style: italic; color: #d63384;" >To the melodies that binds us..To our moments apart yet together 
+        <p >...</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/06rraFw7x86VudgkgEVFxM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+       
+        <div class="countdown-container">
+            
+            <h2 style="color:#d63384; font-weight: bolder;">Countdown to our Forever</h2>
+            
+            <p class="countdown" id="countdown" style="font-size: large;"></p>
+            <img src="img2.jpg" class="image2" alt="Us forever"/>
+        </div>
+        <div class="photos-drive"> 
+           
+                <h2>Special Surprise for You 💌</h2>
+                <a href="https://drive.google.com/drive/folders/1ZodORPeoNddjGha2SbTb5-B3o3FExy5r?usp=sharing" target="_blank" class="drive-button">Open Drive Folder❤️</a>
+            
+            
+            </div>
+        <div class="footer" style="font-weight: bolder; font-style: italic;">~ Made with love🤍<br>Bubbu </div>
+    </div>
+   
+    <script>
+        function revealMessage() {
+            document.getElementById('love-message').style.display = 'block';
+            document.getElementById('hidden-img').style.display = 'block';
+        }
+
+        function updateCountdown() {
+            const weddingDate = new Date('May 25, 2025 10:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
